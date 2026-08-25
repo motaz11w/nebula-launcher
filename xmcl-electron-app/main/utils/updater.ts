@@ -59,7 +59,7 @@ async function downloadAsarUpdate(
     platformFlag += '-ia32'
   }
   const file = `app-${version}-${platformFlag}.asar`
-  const github = `https://github.com/Voxelum/x-minecraft-launcher/releases/download/v${version}/${file}`
+  const github = `https://github.com/motaz11w/nebula-launcher/releases/download/v${version}/${file}`
 
   // Skip the download entirely if the pending file already matches the
   // published checksum.
@@ -267,7 +267,7 @@ async function downloadFullUpdate(
         createRequest: (options: any, callback: any) => {
           if (gfw.inside) {
             options.hostname = 'files.0xc.cn'
-            options.pathname = `/Soft_Mirrors/github-release/Voxelum/x-minecraft-launcher/LatestRelease/${basename(options.pathname)}`
+            options.pathname = `/Soft_Mirrors/github-release/motaz11w/nebula-launcher/LatestRelease/${basename(options.pathname)}`
             app.emit('download-cdn', 'electron', basename(options.pathname))
           }
           return createRequest(options, callback)
@@ -323,7 +323,7 @@ export class ElectronUpdater implements LauncherAppUpdater {
     const { allowPrerelease, locale } = await app.registry.get(kSettings)
     const queryString = `version=v${app.version}&prerelease=${allowPrerelease || false}`
     const primary = await this.app
-      .fetch(`https://api.xmcl.app/latest?${queryString}`, {
+      .fetch(`https://api.github.com/repos/motaz11w/nebula-launcher/releases/latest`, {
         headers: {
           'Accept-Language': locale,
         },
@@ -333,7 +333,7 @@ export class ElectronUpdater implements LauncherAppUpdater {
     // response as well as a transport failure.
     const response = primary?.ok
       ? primary
-      : await this.app.fetch(`https://xmcl-core-api.azurewebsites.net/api/latest?${queryString}`, {
+      : await this.app.fetch(`https://api.xmcl.app/latest?${queryString}`, {
         headers: {
           'Accept-Language': locale,
         },

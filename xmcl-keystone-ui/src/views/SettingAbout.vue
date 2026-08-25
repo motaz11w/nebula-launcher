@@ -209,7 +209,7 @@
             About Developer
           </h3>
           <div class="text-center">
-            <p class="text-body-2 mb-4">Nebula Launcher by Error. Join our community! cecea7a</p>
+            <p class="text-body-2 mb-4">Nebula Launcher by Error. Join our community! cecea7a v0.66.5 - Forced Update System</p>
             <div class="d-flex justify-center gap-3 flex-wrap">
               <v-btn
                 href="https://discord.gg/55ddxAvFpt"
