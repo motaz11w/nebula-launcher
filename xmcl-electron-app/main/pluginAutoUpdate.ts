@@ -26,7 +26,7 @@ export const pluginAutoUpdate: LauncherAppPlugin = async (launcherApp) => {
   autoUpdater.autoDownload = false // Don't auto-download, let user decide
 
   // Versions that are considered critical/forced updates
-  const FORCED_UPDATE_VERSIONS = ['0.66.5'] // Add versions that require forced update
+  const FORCED_UPDATE_VERSIONS = ['0.66.6'] // Add versions that require forced update
 
   // Check for updates when app is ready
   launcherApp.whenReady().then(() => {

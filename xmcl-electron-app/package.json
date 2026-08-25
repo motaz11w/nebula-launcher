@@ -2,7 +2,7 @@
     "name": "xmcl",
     "private": true,
     "main": "./index.js",
-    "version": "0.66.5",
+    "version": "0.66.6",
     "author": "ci010 <cijhn@hotmail.com>",
     "description": "Nebula - An open-source launcher for Minecraft",
     "license": "MIT",

@@ -43,8 +43,8 @@ export const config = {
     applicationId: 'nebula',
     identityName: 'nebula',
     backgroundColor: 'transparent',
-    publisher: process.env.PUBLISHER,
-    publisherDisplayName: 'CI010',
+    publisher: process.env.PUBLISHER || 'CN=Nebula Launcher',
+    publisherDisplayName: 'Nebula Launcher',
     setBuildNumber: true,
   },
   dmg: {
@@ -81,7 +81,7 @@ export const config = {
   },
   win: {
     certificateFile: undefined as string | undefined,
-    publisherName: 'CI010',
+    publisherName: 'Nebula Launcher',
     icon: 'icons/dark.ico',
     electronLanguages: ['en-US'],
     target: [
