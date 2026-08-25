@@ -20,8 +20,8 @@ export const config = {
   // set this to your own repo!
   publish: [{
     provider: 'github',
-    owner: 'voxelum',
-    repo: 'x-minecraft-launcher',
+    owner: 'motaz11w',
+    repo: 'nebula-launcher',
   }],
   files: [{
     from: 'dist',
